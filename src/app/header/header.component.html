@@ -1,0 +1,26 @@
+<header class="header">
+  <nav class="header__nav container">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+    <div class="header__logo">JEANE.DEV</div>
+    </div>
+
+    <div class="header__links">
+      <a class="header__link" href="#home">Home</a>
+      <a class="header__link" href="#skills">Skills</a>
+      <a class="header__link header__link--active" href="#about">Carreira</a>
+      <a class="header__cta" href="#contact">Contato</a>
+    </div>
+
+    <button class="header__menu-btn" (click)="toggleMenu()" aria-label="Abrir menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </nav>
+
+  <div class="header__mobile-menu" *ngIf="menuOpen">
+    <a class="header__mobile-link" href="#home" (click)="toggleMenu()">HOME</a>
+    <a class="header__mobile-link" href="#skills" (click)="toggleMenu()">SKILLS</a>
+    <a class="header__mobile-link header__mobile-link--active" href="#about" (click)="toggleMenu()">CARREIRA</a>
+    <a class="header__mobile-link" href="#contact" (click)="toggleMenu()">CONTATO</a>
+  </div>
+</header>

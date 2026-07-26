@@ -1,0 +1,11 @@
+<section id="values" appReveal class="values container">
+  <div class="values__grid">
+    <div class="values__item" *ngFor="let value of values">
+      <span class="values__code" [class.values__code--cyan]="value.accent === 'cyan'" [class.values__code--purple]="value.accent === 'purple'">
+        {{ value.code }}
+      </span>
+      <h5 class="values__title">{{ value.title }}</h5>
+      <p class="values__text">{{ value.description }}</p>
+    </div>
+  </div>
+</section>
