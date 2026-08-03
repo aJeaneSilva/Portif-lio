@@ -1,0 +1,38 @@
+<section id="certifications" appReveal class="certificates container">
+  <div class="section-header">
+    <h2 class="section-header__title">Certificados</h2>
+    <div class="section-header__line"></div>
+  </div>
+
+  <p class="certificates__hint">
+    <span class="material-symbols-outlined certificates__hint-icon">search</span>
+    Clique no certificado para vê-lo melhor
+  </p>
+
+  <div class="certificates__track-wrapper">
+    <div class="certificates__track">
+      
+      <button
+        type="button"
+        class="certificates__item"
+        *ngFor="let cert of loopedCertificates"
+        (click)="open(cert)"
+      >
+        <img class="certificates__img" [src]="cert.image" [alt]="cert.title" />
+      </button>
+    </div>
+  </div>
+
+  <div class="certificates__lightbox" *ngIf="selected" (click)="close()">
+    <button type="button" class="certificates__lightbox-close" (click)="close()" aria-label="Fechar">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <img
+      class="certificates__lightbox-img"
+      [src]="selected.image"
+      [alt]="selected.title"
+      (click)="$event.stopPropagation()"
+    />
+    <p class="certificates__lightbox-caption">{{ selected.title }}</p>
+  </div>
+</section>

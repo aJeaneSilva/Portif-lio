@@ -1,11 +1,66 @@
 <section id="values" appReveal class="values container">
-  <div class="values__grid">
-    <div class="values__item" *ngFor="let value of values">
-      <span class="values__code" [class.values__code--cyan]="value.accent === 'cyan'" [class.values__code--purple]="value.accent === 'purple'">
-        {{ value.code }}
-      </span>
-      <h5 class="values__title">{{ value.title }}</h5>
-      <p class="values__text">{{ value.description }}</p>
+  <div class="values__wrapper">
+    <div class="values__content">
+      <div class="values__header">
+        <h2 class="values__main-title">Ferramentas & Habilidades</h2>
+      </div>
+
+      <div class="values__grid">
+        <div class="values__item" *ngFor="let value of values">
+          <span class="values__code" [class.values__code--cyan]="value.accent === 'cyan'" [class.values__code--purple]="value.accent === 'purple'">
+            {{ value.code }}
+          </span>
+          <h5 class="values__title">{{ value.title }}</h5>
+          <p class="values__text">{{ value.description }}</p>
+        </div>
+      </div>
+
     </div>
+
+    <div class="values__orbit-container">
+      <div class="orbit-center">
+        <span class="orbit-center-text">JEANE.DEV</span>
+      </div>
+
+      <!-- Anel 1 (Interno) -->
+      <div class="orbit-ring ring-1">
+        <div class="orbit-item item-1">
+          <img src="/img/figma.gif" alt="Figma" />
+        </div>
+        <div class="orbit-item item-2">
+          <img src="/img/ts.png" alt="TypeScript" />
+        </div>
+      </div>
+
+      <!-- Anel 2 (Intermediário) -->
+      <div class="orbit-ring ring-2">
+        <div class="orbit-item item-3">
+          <img src="/img/angular.png" alt="Angular" />
+        </div>
+        <div class="orbit-item item-4">
+          <img src="/img/html.png" alt="HTML5" />
+        </div>
+        <div class="orbit-item item-5">
+          <img src="/img/css.png" alt="CSS3" />
+        </div>
+      </div>
+
+      <!-- Anel 3 (Externo) -->
+      <div class="orbit-ring ring-3">
+        <div class="orbit-item item-6">
+          <img src="/img/js.png" alt="JavaScript" />
+        </div>
+        <div class="orbit-item item-7">
+          <img src="/img/claude.png" alt="Claude AI" />
+        </div>
+        <div class="orbit-item item-8">
+          <img src="/img/git.png" alt="Git" />
+        </div>
+        <div class="orbit-item item-9">
+          <img src="/img/tiktok.png" alt="TikTok" />
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
