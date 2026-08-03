@@ -7,8 +7,10 @@
 
     <div class="header__links">
       <a class="header__link" href="#home">Home</a>
-      <a class="header__link" href="#skills">Skills</a>
-      <a class="header__link header__link--active" href="#about">Carreira</a>
+      <a class="header__link header__link--active" href="#about">História</a>
+      <a class="header__link" href="#skills">Projetos</a>
+      <a class="header__link" href="#values">Ferramentas</a>
+      <a class="header__link" href="#certifications">Certificados</a>
       <a class="header__cta" href="#contact">Contato</a>
     </div>
 
@@ -19,8 +21,10 @@
 
   <div class="header__mobile-menu" *ngIf="menuOpen">
     <a class="header__mobile-link" href="#home" (click)="toggleMenu()">HOME</a>
-    <a class="header__mobile-link" href="#skills" (click)="toggleMenu()">SKILLS</a>
-    <a class="header__mobile-link header__mobile-link--active" href="#about" (click)="toggleMenu()">CARREIRA</a>
+        <a class="header__mobile-link header__mobile-link--active" href="#about" (click)="toggleMenu()">HISTÓRIA</a>
+    <a class="header__mobile-link" href="#skills" (click)="toggleMenu()">PROJETOS</a>
+    <a class="header__mobile-link" href="#values" (click)="toggleMenu()">FERRAMENTAS</a>
+        <a class="header__mobile-link" href="#certifications" (click)="toggleMenu()">CERTIFICADOS</a>
     <a class="header__mobile-link" href="#contact" (click)="toggleMenu()">CONTATO</a>
   </div>
 </header>
