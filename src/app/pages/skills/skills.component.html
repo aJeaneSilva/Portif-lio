@@ -6,14 +6,36 @@
 
   <div class="vision__grid">
     <div class="vision__feature glass-card">
-      <img class="vision__feature-img" src="img/foto-grupo.jpg" alt="Jeane no Ford Enter" />
-      <div class="vision__feature-overlay"></div>
-      <div class="vision__feature-content">
-        <span class="vision__feature-eyebrow">TECNOLOGIA E INOVAÇÃO</span>
-        <h3 class="vision__feature-title">Visita ao CIMATEC PARK</h3>
-        <p class="vision__feature-text">
-          Foto em grupo da turma do programa Ford Enter durante visita técnica ao SENAI CIMATEC PARK.
-        </p>
+
+      <div 
+        *ngFor="let slide of slides; let i = index" 
+        class="vision__slide" 
+        [class.active]="i === currentIndex"
+      >
+        <img class="vision__feature-img" [src]="slide.img" [alt]="slide.title" />
+        <div class="vision__feature-overlay"></div>
+        <div class="vision__feature-content">
+          <span class="vision__feature-eyebrow">{{ slide.category }}</span>
+          <h3 class="vision__feature-title">{{ slide.title }}</h3>
+          <p class="vision__feature-text">{{ slide.description }}</p>
+        </div>
+      </div>
+
+      <button class="vision__nav-btn vision__nav-btn--prev" (click)="prevSlide()" aria-label="Foto anterior">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <button class="vision__nav-btn vision__nav-btn--next" (click)="nextSlide()" aria-label="Próxima foto">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+
+      <div class="vision__dots">
+        <button 
+          *ngFor="let slide of slides; let i = index" 
+          class="vision__dot" 
+          [class.active]="i === currentIndex" 
+          (click)="goToSlide(i)"
+          [attr.aria-label]="'Ir para o slide ' + (i + 1)"
+        ></button>
       </div>
     </div>
 

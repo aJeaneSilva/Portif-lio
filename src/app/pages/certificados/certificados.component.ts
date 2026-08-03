@@ -22,9 +22,12 @@ export class CertificadosComponent {
   { id: 'cert-2', title: 'Fundamentos de Inteligência Artificial', image: '/img/dio-ia.png' },
   { id: 'cert-3', title: 'Desenvolvedora Front-end', image: '/img/front.png' },
   { id: 'cert-4', title: 'Conhecimentos sobre Scrum', image: '/img/scrum.png' },
-  { id: 'cert-5', title: 'Oficina de preparação integral para o mundo do trabalho', image: '/img/redec.png' },
-  { id: 'cert-6', title: 'Workshop online', image: '/img/ebac-figma.png' },
-  { id: 'cert-7', title: 'Gestão do Google Para Empresas', image: '/img/mdg.png' },
+  { id: 'cert-5', title: 'TypeScript na prática', image: '/img/type.png' },
+  { id: 'cert-6', title: 'Git e GitHub', image: '/img/githubcert.png' },
+
+  { id: 'cert-7', title: 'Oficina de preparação integral para o mundo do trabalho', image: '/img/redec.png' },
+  { id: 'cert-8', title: 'Workshop online', image: '/img/ebac-figma.png' },
+  { id: 'cert-9', title: 'Gestão do Google Para Empresas', image: '/img/mdg.png' }
 ];
 
   get loopedCertificates(): Certificados[] {

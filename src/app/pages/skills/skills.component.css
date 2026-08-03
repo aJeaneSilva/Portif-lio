@@ -21,6 +21,21 @@
   border-radius: 16px;
 }
 
+.vision__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.vision__slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
 .vision__feature-img {
   width: 100%;
   height: 100%;
@@ -43,6 +58,7 @@
   bottom: 48px;
   left: 48px;
   right: 48px;
+  z-index: 3;
 }
 
 .vision__feature-eyebrow {
@@ -72,6 +88,66 @@
   margin: 0;
 }
 
+.vision__nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(19, 19, 21, 0.6);
+  border: 1px solid rgba(0, 220, 229, 0.3);
+  color: var(--color-primary-fixed-dim);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.vision__nav-btn:hover {
+  background: var(--color-primary-fixed-dim);
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+}
+
+.vision__nav-btn--prev {
+  left: 16px;
+}
+
+.vision__nav-btn--next {
+  right: 16px;
+}
+
+.vision__dots {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.vision__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-fixed-dim);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.vision__dot.active {
+  background: var(--color-primary-fixed-dim);
+  width: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.6);
+}
+
 .vision__side {
   display: flex;
   flex-direction: column;
@@ -80,7 +156,7 @@
 
 .vision__side-card {
   flex: 1;
-  padding: 40px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -118,4 +194,30 @@
   line-height: 1.6;
   color: var(--color-on-surface-variant);
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .vision__feature {
+    height: 480px;
+  }
+
+  .vision__feature-content {
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+  }
+
+  .vision__feature-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .vision__feature-text {
+    font-size: 14px;
+  }
+
+  .vision__nav-btn {
+    width: 36px;
+    height: 36px;
+  }
 }

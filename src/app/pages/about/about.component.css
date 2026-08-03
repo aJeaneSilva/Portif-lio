@@ -5,25 +5,41 @@
 .about__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 64px;
+  grid-template-areas:
+    "card"
+    "visual"
+    "stats";
+  gap: 40px;
   align-items: center;
 }
 
 @media (min-width: 768px) {
   .about__grid {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card  visual"
+      "stats visual";
+    gap: 40px 64px;
   }
 }
 
-.about__text {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
 .about__card {
+  grid-area: card;
   padding: 40px;
   border-left: 4px solid var(--color-primary-fixed-dim);
+}
+
+.about__visual {
+  grid-area: visual;
+  position: relative;
+  height: 450px;
+}
+
+.about__stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
 .about__card-title {
@@ -40,12 +56,6 @@
   line-height: 1.6;
   color: var(--color-on-surface-variant);
   margin: 0;
-}
-
-.about__stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
 }
 
 .about__stat {
@@ -79,11 +89,6 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-on-surface-variant);
-}
-
-.about__visual {
-  position: relative;
-  height: 450px;
 }
 
 .about__visual-glow {
