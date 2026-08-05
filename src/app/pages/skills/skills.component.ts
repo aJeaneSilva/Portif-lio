@@ -30,14 +30,14 @@ export class SkillsComponent implements OnInit, OnDestroy {
     {
       img: 'img/foto-2.jpg',
       category: 'APRENDIZADO & PRÁTICA',
-      title: 'Workshops e Eventos',
-      description: 'Participação ativa em treinamentos práticos de tecnologia e imersão em desenvolvimento.'
+      title: 'Meu primeiro site - Projeto da Ford Enter',
+      description: 'Desenvolvimento do primeiro site responsivo utilizando HTML, CSS e JavaScript, aplicando boas práticas de programação e design.'
     },
     {
-      img: 'img/foto-3.jpg',
+      img: 'img/foto-3.png',
       category: 'NETWORKING',
-      title: 'Conexões no ecossistema tech',
-      description: 'Troca de conhecimentos e experiências com profissionais e colegas do setor.'
+      title: 'Boas-vindas a nova turma de Front-End',
+      description: 'Tive a oportunidade de trocar experiências durante a integração da nova turma de desenvolvedores Front-end no SENAI CIMATEC.'
     },
     {
       img: 'img/foto-4.jpg',
@@ -48,7 +48,7 @@ export class SkillsComponent implements OnInit, OnDestroy {
     {
       img: 'img/foto-5.jpg',
       category: 'CÓDIGO & PERFORMANCE',
-      title: 'Desenvolvimento Front-end',
+      title: 'Meu primeiro site',
       description: 'Aplicação prática de interfaces modernas utilizando HTML, CSS, TypeScript e Angular.'
     },
     {
@@ -58,10 +58,10 @@ export class SkillsComponent implements OnInit, OnDestroy {
       description: 'Desenvolvimento em time aplicando metodologias ágeis e boas práticas de software.'
     },
     {
-      img: 'img/foto-7.jpg',
-      category: 'IMERSÃO FORD ENTER',
-      title: 'Formação Técnica',
-      description: 'Momentos marcantes da jornada no programa Ford Enter impulsionando minha carreira.'
+      img: 'img/foto-7.jpeg',
+      category: 'ENCONTRO DE ENCERRAMENTO',
+      title: 'Ford<Enter>',
+      description: 'Dia do encerramento do programa de formação técnica em Front-end.'
     }
   ];
 

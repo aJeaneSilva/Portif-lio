@@ -25,9 +25,9 @@ export class ValuesComponent {
       accent: 'cyan'
     },
     {
-      code: '02 // DESIGN & UI',
-      title: 'Interface & Experiência',
-      description: 'Criação de interfaces visuais atraentes, intuitivas e responsivas, unindo boa usabilidade (UX) ao design focado em conversão.',
+      code: '02 // DESIGN & MÍDIA',
+      title: 'Interface & Audiovisual',
+      description: 'Desenvolvimento de interfaces funcionais e focadas na experiência do usuário. Complemento minha visão criativa praticando fotografia e edição de vídeo nos momentos vagos.',
       accent: 'purple'
     },
     {
@@ -38,8 +38,8 @@ export class ValuesComponent {
     },
     {
       code: '04 // EVOLUÇÃO',
-      title: 'Visão Global',
-      description: 'Em constante aperfeiçoamento profissional — unindo aprendizado de novos idiomas (Inglês/Alemão) e tendências do mercado tech.',
+      title: 'Visão Global & Idiomas',
+      description: 'Inglês em nível intermediário e estudos em andamento no idioma alemão. Mantenho o foco na busca contínua pelas melhores práticas e tendências do mercado de tecnologia.',
       accent: 'purple'
     }
   ];
