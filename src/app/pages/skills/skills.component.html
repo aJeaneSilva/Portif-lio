@@ -12,7 +12,12 @@
         class="vision__slide" 
         [class.active]="i === currentIndex"
       >
-        <img class="vision__feature-img" [src]="slide.img" [alt]="slide.title" />
+        <img 
+          class="vision__feature-img" 
+          [src]="slide.img" 
+          [alt]="slide.title" 
+          (click)="openModal(slide)"
+        />
         <div class="vision__feature-overlay"></div>
         <div class="vision__feature-content">
           <span class="vision__feature-eyebrow">{{ slide.category }}</span>
@@ -62,6 +67,17 @@
           </p>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- MODAL / LIGHTBOX (Apenas a Imagem) -->
+  <div class="modal" *ngIf="selectedSlide" (click)="closeModal()">
+    <div class="modal__content glass-card" (click)="$event.stopPropagation()">
+      <button class="modal__close" (click)="closeModal()" aria-label="Fechar imagem">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      
+      <img [src]="selectedSlide.img" [alt]="selectedSlide.title" class="modal__img" />
     </div>
   </div>
 </section>

@@ -20,6 +20,9 @@ export class SkillsComponent implements OnInit, OnDestroy {
   currentIndex = 0;
   private autoSlideInterval: any;
 
+  // Guarda o slide que está aberto no Modal (null se estiver fechado)
+  selectedSlide: Slide | null = null;
+
   slides: Slide[] = [
     {
       img: 'img/foto-grupo.jpg',
@@ -45,20 +48,6 @@ export class SkillsComponent implements OnInit, OnDestroy {
       title: 'Criação de Conteúdo',
       description: 'Bastidores da produção de vídeos com foco em engajamento e conversão de marcas.'
     },
-    /*
-{
-  img: 'img/foto-5.jpg',
-  category: 'CÓDIGO & PERFORMANCE',
-  title: 'Meu primeiro site',
-  description: 'Aplicação prática de interfaces modernas utilizando HTML, CSS, TypeScript e Angular.'
-},
-{
-  img: 'img/foto-6.jpg',
-  category: 'TRABALHO EM EQUIPE',
-  title: 'Projetos Colaborativos',
-  description: 'Desenvolvimento em time aplicando metodologias ágeis e boas práticas de software.'
-},
-*/
     {
       img: 'img/foto-7.jpeg',
       category: 'ENCONTRO DE ENCERRAMENTO',
@@ -90,7 +79,7 @@ export class SkillsComponent implements OnInit, OnDestroy {
 
   nextSlide(): void {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-    this.startAutoSlide(); // Reinicia a contagem dos 3s após a interação
+    this.startAutoSlide();
   }
 
   prevSlide(): void {
@@ -101,5 +90,16 @@ export class SkillsComponent implements OnInit, OnDestroy {
   goToSlide(index: number): void {
     this.currentIndex = index;
     this.startAutoSlide(); 
+  }
+
+  // Controle do Modal/Lightbox
+  openModal(slide: Slide): void {
+    this.selectedSlide = slide;
+    this.stopAutoSlide(); // Pausa o carrossel enquanto a imagem estiver aberta
+  }
+
+  closeModal(): void {
+    this.selectedSlide = null;
+    this.startAutoSlide(); // Retoma o carrossel ao fechar
   }
 }

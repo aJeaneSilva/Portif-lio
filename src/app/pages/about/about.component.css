@@ -26,7 +26,7 @@
 
 .about__card {
   grid-area: card;
-  padding: 40px;
+  padding: 30px;
   border-left: 4px solid var(--color-primary-fixed-dim);
 }
 
@@ -60,7 +60,7 @@
 }
 
 .about__stat {
-  padding: 24px;
+  padding: 20px;
   text-align: center;
 }
 
