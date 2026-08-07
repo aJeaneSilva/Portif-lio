@@ -28,7 +28,7 @@ export class SkillsComponent implements OnInit, OnDestroy {
       description: 'Foto em grupo da turma do programa Ford Enter durante visita técnica ao SENAI CIMATEC PARK.'
     },
     {
-      img: 'img/foto-2.jpg',
+      img: 'img/1site.jpeg',
       category: 'APRENDIZADO & PRÁTICA',
       title: 'Meu primeiro site - Projeto da Ford Enter',
       description: 'Desenvolvimento do primeiro site responsivo utilizando HTML, CSS e JavaScript, aplicando boas práticas de programação e design.'
@@ -40,23 +40,25 @@ export class SkillsComponent implements OnInit, OnDestroy {
       description: 'Tive a oportunidade de trocar experiências durante a integração da nova turma de desenvolvedores Front-end no SENAI CIMATEC.'
     },
     {
-      img: 'img/foto-4.jpg',
+      img: 'img/foto-4.png',
       category: 'MARKETING DIGITAL & UGC',
       title: 'Criação de Conteúdo',
       description: 'Bastidores da produção de vídeos com foco em engajamento e conversão de marcas.'
     },
-    {
-      img: 'img/foto-5.jpg',
-      category: 'CÓDIGO & PERFORMANCE',
-      title: 'Meu primeiro site',
-      description: 'Aplicação prática de interfaces modernas utilizando HTML, CSS, TypeScript e Angular.'
-    },
-    {
-      img: 'img/foto-6.jpg',
-      category: 'TRABALHO EM EQUIPE',
-      title: 'Projetos Colaborativos',
-      description: 'Desenvolvimento em time aplicando metodologias ágeis e boas práticas de software.'
-    },
+    /*
+{
+  img: 'img/foto-5.jpg',
+  category: 'CÓDIGO & PERFORMANCE',
+  title: 'Meu primeiro site',
+  description: 'Aplicação prática de interfaces modernas utilizando HTML, CSS, TypeScript e Angular.'
+},
+{
+  img: 'img/foto-6.jpg',
+  category: 'TRABALHO EM EQUIPE',
+  title: 'Projetos Colaborativos',
+  description: 'Desenvolvimento em time aplicando metodologias ágeis e boas práticas de software.'
+},
+*/
     {
       img: 'img/foto-7.jpeg',
       category: 'ENCONTRO DE ENCERRAMENTO',
