@@ -45,7 +45,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 1s ease;
-  cursor: pointer; /* Cursor indicando imagem clicável */
+  cursor: pointer;
 }
 
 .vision__feature:hover .vision__feature-img {
@@ -56,7 +56,7 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, var(--color-background), rgba(19, 19, 21, 0.2), transparent);
-  pointer-events: none; /* Permite que o clique passe para a imagem por baixo */
+  pointer-events: none;
 }
 
 .vision__feature-content {
@@ -65,7 +65,7 @@
   left: 48px;
   right: 48px;
   z-index: 3;
-  pointer-events: none; /* Garante que os cliques na área do texto também acionem a imagem */
+  pointer-events: none; 
 }
 
 .vision__feature-eyebrow {
@@ -163,7 +163,7 @@
 
 .vision__side-card {
   flex: 1;
-  padding: 20px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -203,72 +203,69 @@
   margin: 0;
 }
 
-/* ==========================================================================
-   ESTILOS DO MODAL / LIGHTBOX (Apenas Imagem)
-   ========================================================================== */
-
 .modal {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(10, 10, 12, 0.9);
-  backdrop-filter: blur(15px);
+  background: rgba(10, 10, 12, 0.92);
+  backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 20px;
   animation: fadeIn 0.3s ease;
 }
 
 .modal__content {
   position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 220, 229, 0.4);
-  display: flex;
+  display: inline-flex; 
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 40px rgba(0, 245, 255, 0.2);
+  max-width: 95vw;
+  max-height: 85vh;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 220, 229, 0.4);
+  box-shadow: 0 0 35px rgba(0, 245, 255, 0.25);
   animation: scaleUp 0.3s ease;
+  background: transparent;
 }
 
 .modal__img {
-  max-width: 100%;
-  max-height: 90vh;
+  max-width: 95vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  border-radius: 15px; 
   display: block;
 }
 
 .modal__close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: -18px;
+  right: -18px;
   z-index: 1010;
-  background: rgba(19, 19, 21, 0.85);
-  border: 1px solid rgba(0, 220, 229, 0.4);
+  background: rgba(19, 19, 21, 0.95);
+  border: 1px solid rgba(0, 220, 229, 0.6);
   color: var(--color-primary-fixed-dim);
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .modal__close:hover {
   background: var(--color-primary-fixed-dim);
   color: #000;
-  box-shadow: 0 0 20px rgba(0, 245, 255, 0.7);
-  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.8);
+  transform: scale(1.1);
 }
 
-/* Animações */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -279,7 +276,6 @@
   to { transform: scale(1); opacity: 1; }
 }
 
-/* Responsividade */
 @media (max-width: 767px) {
   .vision__feature {
     height: 480px;
@@ -306,23 +302,13 @@
   }
 
   .modal {
-    padding: 12px;
-  }
-
-  .modal__content {
-    max-width: 95vw;
-    max-height: 80vh;
-    border-radius: 12px;
-  }
-
-  .modal__img {
-    max-height: 80vh;
+    padding: 16px;
   }
 
   .modal__close {
-    top: 15px;
-    right: 15px;
-    width: 38px;
-    height: 38px;
+    top: -12px;
+    right: -12px;
+    width: 36px;
+    height: 36px;
   }
 }
