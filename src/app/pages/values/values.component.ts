@@ -27,7 +27,7 @@ export class ValuesComponent {
     {
       code: '02 // DESIGN & MÍDIA',
       title: 'Interface & Audiovisual',
-      description: 'Desenvolvimento de interfaces funcionais e focadas na experiência do usuário. Complemento minha visão criativa praticando fotografia e edição de vídeo nos momentos vagos.',
+      description: 'Desenvolvimento de interfaces funcionais e focadas na experiência do usuário. Complemento minha visão criativa praticando fotografia e edição de vídeo no tempo livre.',
       accent: 'purple'
     },
     {
