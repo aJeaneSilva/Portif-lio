@@ -2,15 +2,18 @@
   <nav class="header__nav container">
     <div class="logo">
       <img src="img/logo.png" alt="Logo">
-    <div class="header__logo">JEANE.DEV</div>
+      <div class="header__logo">JEANE.DEV</div>
     </div>
 
     <div class="header__links">
-      <a class="header__link" href="#home">Home</a>
-      <a class="header__link header__link--active" href="#about">História</a>
-      <a class="header__link" href="#skills">Projetos</a>
-      <a class="header__link" href="#values">Ferramentas</a>
-      <a class="header__link" href="#certifications">Certificados</a>
+      <a
+        *ngFor="let link of links"
+        class="header__link"
+        [class.header__link--active]="activeId === link.id"
+        [href]="'#' + link.id"
+      >
+        {{ link.label }}
+      </a>
       <a class="header__cta" href="#contact">Contato</a>
     </div>
 
@@ -20,11 +23,15 @@
   </nav>
 
   <div class="header__mobile-menu" *ngIf="menuOpen">
-    <a class="header__mobile-link" href="#home" (click)="toggleMenu()">HOME</a>
-        <a class="header__mobile-link header__mobile-link--active" href="#about" (click)="toggleMenu()">HISTÓRIA</a>
-    <a class="header__mobile-link" href="#skills" (click)="toggleMenu()">PROJETOS</a>
-    <a class="header__mobile-link" href="#values" (click)="toggleMenu()">FERRAMENTAS</a>
-        <a class="header__mobile-link" href="#certifications" (click)="toggleMenu()">CERTIFICADOS</a>
-    <a class="header__mobile-link" href="#contact" (click)="toggleMenu()">CONTATO</a>
+    <a
+      *ngFor="let link of links"
+      class="header__mobile-link"
+      [class.header__mobile-link--active]="activeId === link.id"
+      [href]="'#' + link.id"
+      (click)="toggleMenu()"
+    >
+      {{ link.label }}
+    </a>
+    <a class="header__mobile-link" href="#contact" (click)="toggleMenu()">Contato</a>
   </div>
 </header>
