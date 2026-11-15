@@ -31,7 +31,10 @@ export class CertificadosComponent {
 
     { id: 'cert-9', title: 'Oficina de preparação integral para o mundo do trabalho', image: '/img/redec.png' },
     { id: 'cert-10', title: 'Workshop online', image: '/img/ebac-figma.png' },
-    { id: 'cert-11', title: 'Gestão do Google Para Empresas', image: '/img/mdg.png' }
+    { id: 'cert-11', title: 'Gestão do Google Para Empresas', image: '/img/mdg.png' },
+    { id: 'cert-12', title: 'Dominando o editor de planilhas', image: '/img/excel.png' },
+    { id: 'cert-13', title: 'Comunicação eficiente nos negócios', image: '/img/comunicacao.png' },
+    { id: 'cert-14', title: 'Habilidades de negociação', image: '/img/negociacoes.png' }
   ];
 
   get loopedCertificates(): Certificados[] {
