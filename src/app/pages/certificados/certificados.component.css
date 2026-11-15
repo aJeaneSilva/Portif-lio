@@ -10,12 +10,32 @@
   font-family: var(--font-mono);
   font-size: var(--text-body-md);
   color: var(--color-on-surface-variant);
-  margin: 0 0 40px;
+  margin: 0 0 12px;
 }
 
 .certificates__hint-icon {
   font-size: 18px;
   color: var(--color-primary-fixed-dim);
+}
+
+.certificates__linkedin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--text-body-md);
+  margin: 0 0 40px;
+}
+
+.certificates__linkedin-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.certificates__linkedin-link:hover {
+  border-bottom-color: var(--color-primary);
 }
 
 .certificates__track-wrapper {
