@@ -32,8 +32,8 @@ export class ValuesComponent {
     },
     {
       code: '03 // PROCESSO',
-      title: 'Agilidade & Entrega',
-      description: 'Metodologias ágeis para prototipagem rápida, organização de rotina e entregas eficientes sem comprometer a qualidade.',
+      title: 'Agilidade & Segurança',
+      description: 'Metodologias ágeis para prototipagem rápida, organização de rotina e entregas eficientes sem comprometer a qualidade. Cada etapa é pensada para garantir a segurança e a estabilidade do usuário.',
       accent: 'cyan'
     },
     {

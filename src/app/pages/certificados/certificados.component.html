@@ -11,10 +11,11 @@
 
   <div class="certificates__track-wrapper">
     <div class="certificates__track">
-      
+
       <button
         type="button"
         class="certificates__item"
+        [class.certificates__item--vertical]="cert.vertical"
         *ngFor="let cert of loopedCertificates"
         (click)="open(cert)"
       >

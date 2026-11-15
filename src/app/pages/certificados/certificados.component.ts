@@ -6,6 +6,7 @@ export interface Certificados {
   id: string;
   title: string;
   image: string;
+  vertical?: boolean;
 }
 
 @Component({
@@ -18,18 +19,20 @@ export interface Certificados {
 export class CertificadosComponent {
 
   certificates: Certificados[] = [
-  { id: 'cert-1', title: 'Conhecimentos sobre LGPD', image: '/img/lgpd.png' },
-  { id: 'cert-2', title: 'Fundamentos de Inteligência Artificial', image: '/img/dio-ia.png' },
-  { id: 'cert-3', title: 'Desenvolvedora Front-end', image: '/img/front.png' },
-  { id: 'cert-4', title: 'Conhecimentos sobre Scrum', image: '/img/scrum.png' },
-  { id: 'cert-5', title: 'TypeScript na prática', image: '/img/type.png' },
-  { id: 'cert-6', title: 'Git e GitHub', image: '/img/githubcert.png' },
-  { id: 'cert-7', title: 'Engenharia de prompt', image: '/img/promptia.png' },
+    { id: 'cert-1', title: 'Conhecimentos sobre LGPD', image: '/img/lgpd.png' },
+    { id: 'cert-2', title: 'Fundamentos de Inteligência Artificial', image: '/img/dio-ia.png' },
+    { id: 'cert-3', title: 'Desenvolvedora Front-End', image: '/img/front.jpeg', vertical: true },
+    { id: 'cert-4', title: 'Desenvolvedora Back-End (Em breve)', image: '/img/back.jpeg', vertical: true },
 
-  { id: 'cert-8', title: 'Oficina de preparação integral para o mundo do trabalho', image: '/img/redec.png' },
-  { id: 'cert-9', title: 'Workshop online', image: '/img/ebac-figma.png' },
-  { id: 'cert-10', title: 'Gestão do Google Para Empresas', image: '/img/mdg.png' }
-];
+    { id: 'cert-5', title: 'Conhecimentos sobre Scrum', image: '/img/scrum.png' },
+    { id: 'cert-6', title: 'TypeScript na prática', image: '/img/type.png' },
+    { id: 'cert-7', title: 'Git e GitHub', image: '/img/githubcert.png' },
+    { id: 'cert-8', title: 'Engenharia de prompt', image: '/img/promptia.png' },
+
+    { id: 'cert-9', title: 'Oficina de preparação integral para o mundo do trabalho', image: '/img/redec.png' },
+    { id: 'cert-10', title: 'Workshop online', image: '/img/ebac-figma.png' },
+    { id: 'cert-11', title: 'Gestão do Google Para Empresas', image: '/img/mdg.png' }
+  ];
 
   get loopedCertificates(): Certificados[] {
     return [...this.certificates, ...this.certificates];

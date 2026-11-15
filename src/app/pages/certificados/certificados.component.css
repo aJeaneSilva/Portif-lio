@@ -1,6 +1,6 @@
 .certificates {
   margin-bottom: 192px;
-  scroll-margin-top: 140px; 
+  scroll-margin-top: 140px;
 }
 
 .certificates__hint {
@@ -26,6 +26,7 @@
 
 .certificates__track {
   display: flex;
+  align-items: center;
   gap: 24px;
   width: max-content;
   animation: certificates-scroll 30s linear infinite;
@@ -47,7 +48,7 @@
 .certificates__item {
   flex: 0 0 auto;
   width: 360px;
-  height: 260px; 
+  height: 260px;
   padding: 0;
   background: var(--color-surface-container);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -64,6 +65,11 @@
   border-color: rgba(0, 245, 255, 0.3);
   box-shadow: 0 20px 40px -12px rgba(99, 5, 239, 0.2);
   transform: translateY(-4px);
+}
+
+.certificates__item--vertical {
+  width: 260px;
+  height: 360px;
 }
 
 .certificates__img {
